@@ -1,0 +1,181 @@
+
+-------------------------Git------------------------
+
+# O que é?
+	-É um sistema de versionamento Destribuído(DVCS)
+
+# Termos Básicos
+
+	+ Repositório: é a pasta onde os arquivos do projeto ficará. Pode ser:
+		->Local: máquina onde o projeto está sendo desenvolvido
+		->Remoto: local na nuvem onde o projeto é armazenado
+		
+	Ex.: git é o repositório local; gitHub é o repositório remoto
+	
+	+ Commit: é um grupo de alterações salvas de um projeto. 
+	Cada commit feito representa um estado específico do projeto.
+	Todo commite terá:
+		-> um texto descrevendo a alteração
+		-> nome do autor
+		-> data do commit
+		->Além de outros metadados
+	
+	+ Branch: são separações de um mesmo projeto. É geralmente
+	utilizado para separar funcionalidades diferentes, novas 
+	funcionalidades e grandes alterações.
+	
+	Ex.: em um projeto de site, poderíamos utilizar uma branch para
+	o conteúdo, outra para o design, outra para testes etc. Então
+	poderíamos designar pessoas para trabalhar em cada uma delas.
+	
+# Arquivo de Configuração
+
+	Há um arquivo de configuração que pode ser encontrado em vários
+locais diferentes.
+
+	+ Arquivo .gitconfig pode ser encontrado em C:\Users\usuário
+	+ Arquivo .git/config pode ser encontrado em cada repositório local
+	+ Arquivo /etc/gitconfig pode ser encontrado na pasta de instalação do git
+	
+	Dependendo da sua localização, pode se comporta de forma diferente:
+	+ .gitconfig: contém configurações para todos os usuários do sistema
+	+ .git/config: contém configurações para um diretório local específico
+	+ /etc/gitconfig: contém configurações para um usuário específico
+
+# Configurações Iniciais
+
+	1 - Precisamos usar os comandos abaixos:
+		comando: git config --global user.name "username" -> seu usuário no GitHub
+		comando: git config --global user.email "email" -> seu email no GitHub
+	
+	Nota1: --global salva as configurações no arquivo
+	.gitconfig, ou seja, aplcia para todos os usuários
+	
+	Nota2: se quiser que o comando se aplique a um repositório
+	específico, tiremos o --global e usamos os comandos acima
+	no local desejado
+	
+	Nota3: mesmo que você bote um email web, o email utilizado 
+	será utilizado será um gerado automaticamente pelo GitHub
+	
+	2 - Para listar todas as configurações no local atual
+		comando: git config --list
+		
+	
+# Comandos
+
+	1 - Criando um Repositório Local
+	
+		Comando: git <path> init
+		Ex.: git 'C:\Desktop\Teste'
+		
+	Nota1: um arquivo .git será criado dentro do diretório escolhido
+	
+	2 - Clonando repositório
+	
+		Comando: git clone <url|path>
+		
+		2.1 - Clonando um repositório local
+		Comando: git clone <path> 
+		Ex.: git clone 'C:\Desktop\Teste'
+		
+		2.2 - Clonando um repositório remoto
+		Comando: git clone <url>
+		Ex.: git clone https://github.com/Houllp/NewTabAcademy/Git
+		
+	3 - Comando remote
+	
+		3.1 - Salvando o repositório remoto
+		
+			Comando: git remote add <nome> <url>
+			Ex.: git remote add origin https://github.com/Houllp/NewTabAcademy/Git
+			
+			Se eu quiser me referir ao repositório remoto acima,
+			só preciso usar o nome 'origin' para isso
+			
+		3.2 - Listando todos os diretórios remotos salvos
+			Comando: git remote
+			
+		3.3 - Deltando a referência para o servidor remoto
+			Comando: git remote remove <nome>
+			Ex.: git remote remove origin
+			
+		3.4 Pegando a URL de uma referência do repositório remoto
+			Comando: git remote get-url <nome>
+			Ex.: git remote get-url origin
+
+	4 - Fazendo Commits
+	
+		4.1 - Especificando quais arquivos queremos comitar
+			Comando: git add <nome do arquivo>
+			Ex.: git add exameplo.txt
+			
+			Para esepcificar todos os arquivos
+			Comando: git add .
+			
+		4.2 - Verificando quais arquivos serão comitados
+			Comando: git status
+			Lista todos os arquivos prontos para o commit
+			
+		4.3 - Fazendo o commit
+			Comando: git commit -m "descrição"
+			Ex.: git commit -m "primeiro commit"
+			
+			Nota1: -m indica que  o que vem depois é a mensagem
+			descrevendo brevemento o commit
+			
+		4.4 - Verificando os commits realizados
+			Comando: git log
+			
+	5 - Verificando modificações nos arquivos
+		Comando: git diff
+		
+	6 - Ignorando arquivos
+	
+		Há duas formas de ignorar arquivos:
+			 + especificando quais arquivos serão comitados usando o comando git add
+			 + especificando no arquivo .gitignore
+			 
+		5.1 - Arquivo .gitignore
+		
+			1 - Criamos um arquivo chamado .gitignore no repositório local
+			2 - Para ignorar um ou vários arquivos, basta adicionar o nome do arquivo
+			Nota: cada nome deve estar em linhas diferentes
+			3 - Se for um diretório, basta enviar o caminho da pasta
+			
+			
+	7 - Branchs
+	
+		7.1 - Mostra todas as branchs e qual está selecionada
+			Comando: git branch
+			
+		7.2 - Cria um branch, mas não a selecionada
+			Comando: git branch <nome>
+			Ex.: git branch testes
+			
+		7.3 - Selecionando a branch
+			Comando git switch <nome>
+			Ex.: git switch testes
+			
+		7.4 - Criando e selecionando a branch criada
+			Comando: git checkout -b <nome>
+			Ex.: git checkout -b testes
+			
+		7.5 - Deletando um branch
+			Comando:git branch -d <nome>
+			Ex.: git branch -d testes
+			
+		7.6 - Mesclando branchs
+			Comando1: git merge <branch> # mesclagem com a branch atualmente selecionada
+			Comando2: git merge <branch>
+		
+	8 - Fazendo Pushs
+
+		8.1 - Enviando a branch criada para o repositório remotos
+			Comando: git push <url|nome> <branch>
+			Ex.: git push origin testes
+			
+		8.2 - Enviando o repositório local para o remoto
+			Comando: git push <url remota|nome remoto> <branch>
+			Ex.: git push origin teste
+			
