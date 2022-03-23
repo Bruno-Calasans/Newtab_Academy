@@ -151,19 +151,19 @@ locais diferentes.
 			
 		7.2 - Cria um branch, mas não a selecionada
 			Comando: git branch <nome>
-			Ex.: git branch testes
+			Ex.: git branch teste
 			
 		7.3 - Selecionando a branch
 			Comando git switch <nome>
-			Ex.: git switch testes
-			
+			Ex.: git switch teste
+		
 		7.4 - Criando e selecionando a branch criada
 			Comando: git checkout -b <nome>
-			Ex.: git checkout -b testes
+			Ex.: git checkout -b teste
 			
 		7.5 - Deletando um branch
 			Comando:git branch -d <nome>
-			Ex.: git branch -d testes
+			Ex.: git branch -d teste
 			
 		7.6 - Mesclando branchs
 			Comando1: git merge <branch> # mesclagem com a branch atualmente selecionada
@@ -173,9 +173,16 @@ locais diferentes.
 
 		8.1 - Enviando a branch criada para o repositório remotos
 			Comando: git push <url|nome> <branch>
-			Ex.: git push origin testes
+			Ex.: git push origin teste
 			
 		8.2 - Enviando o repositório local para o remoto
 			Comando: git push <url remota|nome remoto> <branch>
 			Ex.: git push origin teste
 			
+	9 - Fazendo pull
+	
+		Vamos atualziar nosso repositório local com o remoto
+		Comando: git pull <url> <branch>
+		Ex.: git pull origin main
+		
+		
