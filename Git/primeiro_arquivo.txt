@@ -181,7 +181,7 @@ locais diferentes.
 			
 	9 - Fazendo pull
 	
-		Vamos atualziar nosso repositório local com o remoto
+		Vamos atualizar nosso repositório local com o remoto
 		Comando: git pull <url> <branch>
 		Ex.: git pull origin main
 		
