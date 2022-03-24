@@ -1,0 +1,46 @@
+/* tabela -------------------------------------------------------*/
+table{
+    display: flex;
+    padding: 10px;
+    border-collapse: collapse;
+    justify-content: center;
+    flex-grow: 2; 
+}
+
+/*primeira linha*/
+tr:nth-child(1){
+    background-color: #f54e3b;
+}
+
+/*colunas pares*/
+tr:nth-child(2n){
+    background-color: rgb(137, 175, 228);
+}
+
+/*botão alterar*/
+.btnAlterar{
+    padding: 5px;
+    cursor: pointer;
+}
+
+
+/*colunas*/
+th, td{
+    text-align: center;
+    border: 1px solid black;
+    padding: 5px;
+}
+
+/*coluna nome*/
+tr th:nth-child(1){
+    width: 40%;
+}
+
+/*coluna ações*/
+tr th:nth-child(3){
+    width: 20%;
+}
+/*coluna experiência*/
+tr th:nth-child(3){
+    width: 20%;
+}

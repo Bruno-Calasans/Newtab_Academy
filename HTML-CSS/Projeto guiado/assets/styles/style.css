@@ -1,6 +1,7 @@
 
 *{
     margin: 0px;
+    box-sizing: border-box;
 }
 
 /* tags principais -----------------------------------------------------------*/
@@ -10,7 +11,6 @@ body{
     grid-template-rows: 100px 1fr 50px;
     grid-template-areas: 'header' 'main' 'footer';
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    
 }
 
 header{
@@ -20,11 +20,11 @@ header{
     background-image: linear-gradient(to left, #f54e3b, #0a0ab1);
 }
 
+
 /* tags semânticas -----------------------------------------------------------*/
 main{
     grid-area: main;
     padding: 10px;
-   
 }
 
 .menu{
@@ -47,52 +47,7 @@ main{
     transition: background-color 0.5s;
 }
 
-/* tabela -------------------------------------------------------*/
-table{
-    display: flex;
-    padding: 10px;
-    border-collapse: collapse;
-    justify-content: center;
-    flex-grow: 2; 
-}
 
-/*primeira linha*/
-tr:nth-child(1){
-    background-color: #f54e3b;
-}
-
-/*colunas pares*/
-tr:nth-child(2n){
-    background-color: rgb(137, 175, 228);
-}
-
-/*botão alterar*/
-.btnAlterar{
-    padding: 5px;
-    cursor: pointer;
-}
-
-
-/*colunas*/
-th, td{
-    text-align: center;
-    border: 1px solid black;
-    padding: 5px;
-}
-
-/*coluna nome*/
-tr th:nth-child(1){
-    width: 40%;
-}
-
-/*coluna ações*/
-tr th:nth-child(3){
-    width: 20%;
-}
-/*coluna experiência*/
-tr th:nth-child(3){
-    width: 20%;
-}
 
 /* footer --------------------------------------------------------------------*/
 footer{
