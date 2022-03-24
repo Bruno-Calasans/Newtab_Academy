@@ -20,6 +20,10 @@ header{
     background-image: linear-gradient(to left, #f54e3b, #0a0ab1);
 }
 
+.logo{
+    height: 15vh;
+}
+
 
 /* tags semânticas -----------------------------------------------------------*/
 main{
@@ -46,7 +50,6 @@ main{
     background-color: blue;
     transition: background-color 0.5s;
 }
-
 
 
 /* footer --------------------------------------------------------------------*/
