@@ -2,25 +2,23 @@
  @import url("https://use.typekit.net/blc7cfn.css");
 
 :root{
-    --fonte: lato, sans-serif;
-    --corFundo1: #E0E0E0;
-    --corFundo2: #E5E5E5;
-    --corFundo3: #FFFFFF;
-    --cor3: #979797;
-    --cor4: #333333;
-
+    --fonte: lato, sans-serif; 
+    --cor1: #FFFFFF;
+    --cor2: #E5E5E5;
+    --cor3: #E0E0E0;
+    --cor4: #979797;
+    --cor5: #333333;
 
 }
 
 /* Estilos genérico ----------------------------------------------------------*/
 *{
     margin: 0px;
-    color: var(--cor4);
+    color: var(--cor5);
     box-sizing: border-box;
 }
 
 body{
-    
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 80px 1fr 8px;
@@ -37,7 +35,7 @@ a{
 }
 
 
-/*Cabeçalho ------------------------------------------------------------------*/
+/* Cabeçalho -----------------------------------------------------------------*/
 header{
 
     display: flex;
@@ -48,49 +46,76 @@ header{
     /*Dimensões*/
     width: 100%;
     height: 80px;
-    padding: 10px;
-    background-color: var(--corFundo1);
-
-    /*Tipografia*/
-   
-
-    /*Posicionamento*/
+    padding: 15px;
+    background-color: var(--cor3);
 }
 
-/* Título e Logo da página */
-.tit{
-    display: flex;
-    align-items: center;
-}
-
+/* Logo e Nome da página */
 .logo{
-    height: 40px;
+    height: 30px;
+    margin-right: 10px;
 }
 
 .nomePag{
-
-    /*Tipografia*/
     font-size: 20px;
     font-weight: bold;
 }
 
-
-/* Menu */
+/* Menus */
 .menu-toggle{
+
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 40px;
+    width: 20px;
     font-size: 2em; 
-    color: var(--corFundo1);
-    background-color: var(--cor4);
+    color: var(--cor5);
+    background-color: var(--cor3);
     border-radius: 4px;
+    cursor: pointer;
+    display: none; /*oculto por padrão*/
+}
+
+.menu-lateral{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    right: 0px;
+    height: 100vh;
+    width: 200px;
+    padding-top: 40px;
+    background-color: var(--cor5);
     display: none;
 }
 
+.closeBtn{
+    position: absolute;
+    color: var(--cor4);
+    font-size: 1.5em;
+    left: 10px;
+    top: 0px;
+    cursor: pointer;
+}
+
+.closeBtn:hover{
+    color: var(--cor1);
+}
+
+.menu-lateral a{
+    padding: 5px;
+    width: 100%;
+    color: var(--cor4);
+    text-align: center;
+}
+
+.menu-lateral a:hover{
+    color: var(--cor1);
+    background-color: var(--cor4);
+}
 
 .menu{
-    background-color:  var(--corFundo3);
+    background-color:  var(--cor1);
     border-radius: 4px;
 }
 
@@ -106,43 +131,50 @@ header{
     padding: 4px;
 }
 
-
 /*Conteúdo principal ---------------------------------------------------------*/
 main{
     display: flex;
     grid-area: conteúdo;
     justify-content: space-around;
     align-items: center;
+    padding: 10px;
 }
 
-
-/*Formulário*/
-.areaTit{
+/*título do formulário e dos extratos*/
+.form-tit, .extrato-tit{
     font-weight: bold;
     text-align: center;
 }
 
+/* Formulário */
 .transação{
     display: flex;
     flex-direction: column;
-    padding: 10px;
+    padding: 5px;
     width: 50%;
-    border: 1px solid  var(--cor3);
+    border: 1px solid  var(--cor4);
 }
 
-.transação input, select{
+.form-item{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 5px;
+}
+
+.transação input, .transação select{
     margin-bottom: 5px;
     padding: 5px;
 }
 
 input[type=submit]{
     border: 0px;
-    background-color: var(--cor4);
-    color: var(--corFundo2);
+    background-color: var(--cor5);
+    color: var(--cor1);
     cursor: pointer;
 }
 
-/*Seções dos extratos*/
+/* Extratos */
 .extrato{
     padding: 5px;
     width: 50%
@@ -154,29 +186,19 @@ input[type=submit]{
     padding: 5px;
 }
 
-.categoria{
-    font-weight: bold;
-}
+.categoria{font-weight: bold;}
 
-.categoria:nth-of-type(1){
-    border-bottom: 1px solid var(--cor3);
-}
+.categoria-header, .mercadoria{border-bottom: 1px solid var(--cor4);}
 
-.mercadoria{
-    border-bottom: 1px solid var(--cor3);
-}
-
-.mercadoria:nth-child(1){
-    border-bottom: 1px solid var(--cor3);
-}
-
+/* classe para quando a collapse-box estiver fechada */
 .inativo::before{
     font-weight: bold;
     margin-right: 5px;
     content: '+';
 }
 
-.ativo::before{
+/* classes para quando a collapse-box estiver aberta */
+.ativo::before{ 
     font-weight: bold;
     margin-right: 5px;
     content: '-';
@@ -185,7 +207,7 @@ input[type=submit]{
 /*Rodapé ---------------------------------------------------------------------*/
 footer{
     grid-area: rodapé;
-    background-color: var(--cor4);
+    background-color: var(--cor5);
     height: 8px;
 }
 

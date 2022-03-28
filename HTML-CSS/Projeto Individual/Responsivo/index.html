@@ -11,12 +11,9 @@
 <body>
 
     <header>
-
-        <div class="tit">
-            <img class="logo" src="assets/img/teste.png" alt="">
-            <p class="nomePag">Controle Financeiro</p>
-        </div>
-
+        <img class="logo" src="assets/img/logo.svg" alt="">
+        <div class="nomePag">Controle Financeiro</div>
+    
         <nav class="menu">
             <ul class="lista">
                 <li class="menu-item"><a href="">Dashboard</a></li>
@@ -28,34 +25,49 @@
         <nav class="menu-toggle">☰</nav>
 
     </header>
+    
+    <div class="menu-lateral">
+        <div class="closeBtn">×</div>
+        <a href="">Dashboard</a>
+        <a href="">Resumo</a>
+        <a href="">Configurações</a>
+    </div>
 
     <main>
 
         <form action="" class="transação">
 
-            <h3 class="areaTit">Nova Transação</h3>
+            <div class="form-item form-tit">Nova Transação</div>
 
-            <label for="tipo">Tipo de Transação</label>
-            <select name="" id="tipo">
-                <option value="1">Compra</option>
-                <option value="2">Venda</option>
-            </select>
+            <div class="form-item">
+                <label for="tipo">Tipo de Transação</label>
+                <select name="" id="tipo">
+                    <option value="1">Compra</option>
+                    <option value="2">Venda</option>
+                </select>
+            </div>
 
-            <label for="nome">Nome da mercadoria</label>
-            <input type="text" name="" id="nome" placeholder="Mercadoria">
+            <div class="form-item">
+                <label for="nome">Nome da mercadoria</label>
+                <input type="text" name="" id="nome" placeholder="Mercadoria">
+            </div>
 
-            <label for="valor">Valor</label>
-            <input type="number" name="" id="valor" placeholder="R$ 00,00">
+            <div class="form-item">
+                <label for="valor">Valor</label>
+                <input type="number" name="" id="valor" placeholder="R$ 00,00">
+            </div>
 
-            <input type="submit" value="Adicionar transação">
+            <div class="form-item form-submit">
+                <input type="submit" value="Adicionar transação">
+            </div>
 
         </form>
 
         <div class="extrato">
 
-            <h3 class="areaTit">Extrato das Transações</h3>
+            <div class="extrato-tit">Extrato das Transações</div>
 
-            <div class="categoria">
+            <div class="categoria categoria-header">
                 <div>Mercadoria</div>
                 <div>Valor</div>
             </div>
@@ -75,7 +87,7 @@
                 <div class="preço">R$ 200.00</div>
             </div>
 
-            <div class="categoria">
+            <div class="categoria categoria-footer">
                 <div>Total</div>
                 <div>R$ 2400.00</div>
             </div>
