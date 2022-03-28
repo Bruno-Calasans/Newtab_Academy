@@ -1,0 +1,193 @@
+
+ @import url("https://use.typekit.net/blc7cfn.css");
+
+:root{
+    --fonte: lato, sans-serif;
+    --corFundo1: #E0E0E0;
+    --corFundo2: #E5E5E5;
+    --corFundo3: #FFFFFF;
+    --cor3: #979797;
+    --cor4: #333333;
+
+
+}
+
+/* Estilos genérico ----------------------------------------------------------*/
+*{
+    margin: 0px;
+    color: var(--cor4);
+    box-sizing: border-box;
+}
+
+body{
+    
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 80px 1fr 8px;
+    grid-template-areas: 
+    'cabeçalho cabeçalho'
+    'conteúdo conteúdo'
+    'rodapé rodapé';
+    height: 100vh;
+    font-family: var(--fonte);
+}
+
+a{
+    text-decoration: none;
+}
+
+
+/*Cabeçalho ------------------------------------------------------------------*/
+header{
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    grid-area: cabeçalho;
+
+    /*Dimensões*/
+    width: 100%;
+    height: 80px;
+    padding: 10px;
+    background-color: var(--corFundo1);
+
+    /*Tipografia*/
+   
+
+    /*Posicionamento*/
+}
+
+/* Título e Logo da página */
+.tit{
+    display: flex;
+    align-items: center;
+}
+
+.logo{
+    height: 40px;
+}
+
+.nomePag{
+
+    /*Tipografia*/
+    font-size: 20px;
+    font-weight: bold;
+}
+
+
+/* Menu */
+.menu-toggle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    font-size: 2em; 
+    color: var(--corFundo1);
+    background-color: var(--cor4);
+    border-radius: 4px;
+    display: none;
+}
+
+
+.menu{
+    background-color:  var(--corFundo3);
+    border-radius: 4px;
+}
+
+.lista{
+    display: flex;
+    padding: 0px;
+    list-style: none;
+}
+
+.menu-item{
+    font-size: 16px;
+    margin: 4px;
+    padding: 4px;
+}
+
+
+/*Conteúdo principal ---------------------------------------------------------*/
+main{
+    display: flex;
+    grid-area: conteúdo;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+/*Formulário*/
+.areaTit{
+    font-weight: bold;
+    text-align: center;
+}
+
+.transação{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    width: 50%;
+    border: 1px solid  var(--cor3);
+}
+
+.transação input, select{
+    margin-bottom: 5px;
+    padding: 5px;
+}
+
+input[type=submit]{
+    border: 0px;
+    background-color: var(--cor4);
+    color: var(--corFundo2);
+    cursor: pointer;
+}
+
+/*Seções dos extratos*/
+.extrato{
+    padding: 5px;
+    width: 50%
+}
+
+.categoria, .mercadoria{
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+}
+
+.categoria{
+    font-weight: bold;
+}
+
+.categoria:nth-of-type(1){
+    border-bottom: 1px solid var(--cor3);
+}
+
+.mercadoria{
+    border-bottom: 1px solid var(--cor3);
+}
+
+.mercadoria:nth-child(1){
+    border-bottom: 1px solid var(--cor3);
+}
+
+.inativo::before{
+    font-weight: bold;
+    margin-right: 5px;
+    content: '+';
+}
+
+.ativo::before{
+    font-weight: bold;
+    margin-right: 5px;
+    content: '-';
+}
+
+/*Rodapé ---------------------------------------------------------------------*/
+footer{
+    grid-area: rodapé;
+    background-color: var(--cor4);
+    height: 8px;
+}
+
+
+

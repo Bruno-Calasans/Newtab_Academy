@@ -1,0 +1,58 @@
+
+/*
+/*Telas muito largas*/
+@media (min-width: 1101px){
+
+    main{
+        align-content: center;
+        justify-content: center;
+    }
+
+    .transação{
+        width: 400px;
+    }
+
+    .extrato{
+        width: 600px;
+    }
+}
+
+
+/*Para tablets landscape*/
+@media (max-width: 1100px){
+
+    header{
+        justify-content: space-between;
+    }
+
+    main{
+        justify-content: space-between;
+    }
+
+}
+
+/*tablets em retrato*/
+@media (max-width: 770px){
+
+    header{
+        justify-content: space-between;
+    }
+
+    .menu{
+        display: none;
+    }
+
+    .menu-toggle{
+        display: flex;
+    }
+
+    main{
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    .transação{width: 100%;}
+
+    .extrato{width: 100%;}
+
+}

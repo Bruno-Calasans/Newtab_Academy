@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto Individual</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsividade.css">
+</head>
+<body>
+
+    <header>
+
+        <div class="tit">
+            <img class="logo" src="assets/img/teste.png" alt="">
+            <p class="nomePag">Controle Financeiro</p>
+        </div>
+
+        <nav class="menu">
+            <ul class="lista">
+                <li class="menu-item"><a href="">Dashboard</a></li>
+                <li class="menu-item"><a href="">Resumo</a></li>
+                <li class="menu-item"><a href="">Configurações</a></li>
+            </ul>
+        </nav>
+
+        <nav class="menu-toggle">☰</nav>
+
+    </header>
+
+    <main>
+
+        <form action="" class="transação">
+
+            <h3 class="areaTit">Nova Transação</h3>
+
+            <label for="tipo">Tipo de Transação</label>
+            <select name="" id="tipo">
+                <option value="1">Compra</option>
+                <option value="2">Venda</option>
+            </select>
+
+            <label for="nome">Nome da mercadoria</label>
+            <input type="text" name="" id="nome" placeholder="Mercadoria">
+
+            <label for="valor">Valor</label>
+            <input type="number" name="" id="valor" placeholder="R$ 00,00">
+
+            <input type="submit" value="Adicionar transação">
+
+        </form>
+
+        <div class="extrato">
+
+            <h3 class="areaTit">Extrato das Transações</h3>
+
+            <div class="categoria">
+                <div>Mercadoria</div>
+                <div>Valor</div>
+            </div>
+
+            <div class="mercadoria">
+                <div class="nome ativo">Caminhão</div>
+                <div class="preço">R$ 1000.00</div>
+            </div>
+
+            <div class="mercadoria">
+                <div class="nome ativo">Celular X78</div>
+                <div class="preço">R$ 1200.00</div>
+            </div>
+
+            <div class="mercadoria">
+                <div class="nome inativo">Bicicleta</div>
+                <div class="preço">R$ 200.00</div>
+            </div>
+
+            <div class="categoria">
+                <div>Total</div>
+                <div>R$ 2400.00</div>
+            </div>
+
+        </div>
+
+    </main>
+
+    <footer>
+    </footer>
+    
+</body>
+</html>
