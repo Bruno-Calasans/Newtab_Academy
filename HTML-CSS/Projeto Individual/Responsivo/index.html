@@ -7,31 +7,42 @@
     <title>Projeto Individual</title>
     <link rel="stylesheet" href="assets/style/style.css">
     <link rel="stylesheet" href="assets/style/responsividade.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
 
     <header>
-        <img class="logo" src="assets/img/logo.svg" alt="">
-        <div class="nomePag">Controle Financeiro</div>
-    
-        <nav class="menu">
-            <ul class="lista">
-                <li class="menu-item"><a href="">Cadastro de Transações</a></li>
-                <li class="menu-item"><a href="">Limpar Dados</a></li>
-            
-            </ul>
-        </nav>
 
-        <nav class="menu-toggle">☰</nav>
+        <!-- contéudo do header -->
+        <div class="header-content">
+
+            <img class="logo" src="assets/img/logo.svg" alt="">
+
+            <div class="nomePag">Controle Financeiro</div>
+
+        
+            <!-- menu desktop -->
+            <nav id="menu">
+
+                <ul class="menu-list">
+
+                    <div id="closeBtn">×</div>
+                    <li class="list-item">
+                        <a href="">Cadastro de Transações</a>
+                    </li>
+                    <li class="list-item">
+                        <a href="">Limpar Dado</a>
+                    </li>
+
+                </ul>
+            </nav>
+
+             <!-- menu mobile -->
+             <nav id="menu-toggle">☰</nav>
+             
+        </div>
 
     </header>
-    
-    <div class="menu-lateral">
-        <div class="closeBtn">×</div>
-        <a href="">Dashboard</a>
-        <a href="">Resumo</a>
-        <a href="">Configurações</a>
-    </div>
 
     <main>
 
@@ -57,10 +68,8 @@
                 <input type="number" name="" id="valor" placeholder="R$ 00,00">
             </div>
 
-            <div class="form-item form-submit">
-                <input type="submit" value="Adicionar transação">
-            </div>
-
+            <input class="form-submit" type="submit" value="Adicionar transação">
+            
         </form>
 
         <div class="extrato">
@@ -73,7 +82,7 @@
             </div>
 
             <div class="mercadoria">
-                <div class="nome ativo">Caminhão</div>
+                <div class="nome ativo">Caminhão modelo ultra super foda pica supremo poderoso imponente derradeiro imparável singular XM980</div>
                 <div class="preço">R$ 1000.00</div>
             </div>
 

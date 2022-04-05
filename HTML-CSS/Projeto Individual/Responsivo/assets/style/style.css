@@ -30,24 +30,28 @@ body{
     font-family: var(--fonte);
 }
 
-a{
-    text-decoration: none;
-}
-
+a{text-decoration: none;}
 
 /* Cabeçalho -----------------------------------------------------------------*/
 header{
 
     display: flex;
-    justify-content: space-around;
-    align-items: center;
-    grid-area: cabeçalho;
+    justify-content: center;
 
     /*Dimensões*/
     width: 100%;
     height: 80px;
     padding: 15px;
     background-color: var(--cor3);
+    grid-area: cabeçalho;
+   
+}
+
+.header-content{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 1200px;
 }
 
 /* Logo e Nome da página */
@@ -62,8 +66,9 @@ header{
 }
 
 /* Menus */
-.menu-toggle{
 
+/* menu desktop */
+#menu-toggle{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -76,72 +81,86 @@ header{
     display: none; /*oculto por padrão*/
 }
 
-.menu-lateral{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: absolute;
-    right: 0px;
-    height: 100vh;
-    width: 200px;
-    padding-top: 40px;
-    background-color: var(--cor5);
-    display: none;
-}
-
-.closeBtn{
-    position: absolute;
-    color: var(--cor4);
-    font-size: 1.5em;
-    left: 10px;
-    top: 0px;
-    cursor: pointer;
-}
-
-.closeBtn:hover{
-    color: var(--cor1);
-}
-
-.menu-lateral a{
-    padding: 5px;
-    width: 100%;
-    color: var(--cor4);
-    text-align: center;
-}
-
-.menu-lateral a:hover{
-    color: var(--cor1);
-    background-color: var(--cor4);
-}
-
-.menu{
+#menu{
     background-color:  var(--cor1);
     border-radius: 4px;
 }
 
-.lista{
+.menu-list{
     display: flex;
     padding: 0px;
     list-style: none;
 }
 
-.menu-item{
+.list-item{
     font-size: 16px;
     margin: 4px;
     padding: 4px;
 }
+
+.menu-list-toggle{
+    padding: 0px;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    height: 100vh;
+    width: 200px;
+    background-color: var(--cor5);
+    color: var(--cor1);
+    padding-top: 50px;
+    z-index: 1;
+}
+
+.list-item-toggle{
+    width: 100%;
+    text-align: center;
+    font-size: 16px;
+    color: var(--cor1);
+}
+
+.list-item-toggle a{
+    display: block; 
+    color: var(--cor2);
+    padding: 5px;
+}
+
+.list-item-toggle a:hover{
+    color: var(--cor5); 
+    background-color: var(--cor4);
+}
+
+#closeBtn{
+    position: absolute;
+    color: var(--cor4);
+    font-size: 1.8em;
+    left: 10px;
+    top: 0px;
+    cursor: pointer;
+    display: none;
+    z-index: 1;
+}
+
+#closeBtn:hover{color: var(--cor1);}
 
 /*Conteúdo principal ---------------------------------------------------------*/
 main{
     display: flex;
     grid-area: conteúdo;
     justify-content: space-around;
-    align-items: center;
-    padding: 10px;
+    align-items: flex-start;
+    margin-top: 20px;
+    padding-left: 5px;
+    padding-right: 5px;
 }
 
 /*título do formulário e dos extratos*/
+.transação, .extrato{font-size: 0.8em;}
+
 .form-tit, .extrato-tit{
+    font-size: 1.8em;
     font-weight: bold;
     text-align: center;
 }
@@ -150,9 +169,9 @@ main{
 .transação{
     display: flex;
     flex-direction: column;
-    padding: 5px;
-    width: 50%;
+    width: 40%;
     border: 1px solid  var(--cor4);
+    padding: 5px;
 }
 
 .form-item{
@@ -167,17 +186,19 @@ main{
     padding: 5px;
 }
 
-input[type=submit]{
+.form-submit{
     border: 0px;
     background-color: var(--cor5);
     color: var(--cor1);
     cursor: pointer;
+    height: 25px;
+    border-radius: 4px;
 }
 
 /* Extratos */
 .extrato{
     padding: 5px;
-    width: 50%
+    width: 60%
 }
 
 .categoria, .mercadoria{
@@ -185,6 +206,10 @@ input[type=submit]{
     justify-content: space-between;
     padding: 5px;
 }
+
+/*dentro da div .mercadoria*/
+.nome{width: 80%}
+.valor{width: 20%;}
 
 .categoria{font-weight: bold;}
 

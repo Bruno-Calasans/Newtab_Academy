@@ -17,8 +17,7 @@
 /*Para tablets landscape*/
 @media (max-width: 1100px){
 
-    header{justify-content: space-between;}
-
+    .header-content{justify-content: space-between;}
     main{justify-content: space-between;}
 }
 
@@ -26,10 +25,10 @@
 @media (max-width: 770px){
 
     /* ocultando o menu desktop/tablet */
-    .menu{display: none;}
+    #menu{display: none;}
 
     /* mostrando o menu mobile */
-    .menu-toggle{display: flex;}
+    #menu-toggle{display: flex;}
 
     main{
         flex-direction: column;
@@ -40,7 +39,7 @@
     .transação{
         width: 100%;
         display: grid;
-        grid-template-columns: 40% 40% 20%;
+        grid-template-columns: 30% 40% 30%;
         grid-template-rows: repeat(3, 1fr);
     }
 
@@ -52,16 +51,31 @@
 
     /*botão do formulário*/
     .form-submit{
-        grid-column: 2/4;
+        width: 200px;
+        justify-self: flex-end;
+        align-self: center;
+        grid-column: span 3;
     }
 
     .extrato{width: 100%;}
 }
 
 /* para celulares */
-@media (max-width: 422px){
+@media (max-width: 402px){
+
+    /* ajustando o tamanho do menu toggle*/
+    .menu-list-toggle{width: 300px;}
+
+    /*título do formulário*/
+    .form-tit{display: none;}
 
     .transação{
-        display: flex;
+        border: 0px;
+        border-bottom: 2px solid  var(--cor4);
     }
+
+    /*botão do formulário*/
+    .form-submit{width: 99%;}
+
+    .transação{ display: flex;}
 }
