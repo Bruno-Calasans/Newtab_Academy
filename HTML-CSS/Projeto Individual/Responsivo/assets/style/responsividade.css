@@ -4,25 +4,31 @@
 @media (min-width: 1101px){
 
     main{
-        align-content: center;
+        margin-top: 30px;
         justify-content: center;
     }
 
     .transação{width: 400px;}
 
-    .extrato{ width: 600px;}
+    .extrato{
+        margin-left: 20px;
+        width: 680px;
+    }
 }
 
-
 /*Para tablets landscape*/
-@media (max-width: 1100px){
+@media (max-width: 1100px) and (min-width: 771px){
 
-    .header-content{justify-content: space-between;}
-    main{justify-content: space-between;}
+    main{margin-top: 20px;}
+    .extrato{margin-left: 20px;}
 }
 
 /*tablets em retrato*/
 @media (max-width: 770px){
+
+    /* ajustando o header */
+    .header-content{justify-content: space-between;}
+    .nomePag{flex-grow: 0;}
 
     /* ocultando o menu desktop/tablet */
     #menu{display: none;}
@@ -35,7 +41,7 @@
         justify-content: space-evenly;
     }
 
-    /*formulário*/
+    /* formulário */
     .transação{
         width: 100%;
         display: grid;
@@ -49,7 +55,7 @@
         grid-column: span 3;
     }
 
-    /*botão do formulário*/
+    /* botão de enviar do formulário */
     .form-submit{
         width: 200px;
         justify-self: flex-end;
@@ -64,18 +70,21 @@
 @media (max-width: 402px){
 
     /* ajustando o tamanho do menu toggle*/
-    .menu-list-toggle{width: 300px;}
+    .menu-list-toggle{
+        width: 300px;
+        animation: showToggleMobile 0.5s;
+    }
 
-    /*título do formulário*/
-    .form-tit{display: none;}
-
+    /* formulário */
     .transação{
+        display: flex;
         border: 0px;
         border-bottom: 2px solid  var(--cor4);
     }
 
-    /*botão do formulário*/
-    .form-submit{width: 99%;}
+    /* ocultando o título do formulário */
+    .form-tit{display: none;}
 
-    .transação{ display: flex;}
+    /*botão do formulário*/
+    .form-submit{width: 100%;}
 }
